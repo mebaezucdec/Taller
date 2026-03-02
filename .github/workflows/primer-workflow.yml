@@ -1,0 +1,24 @@
+# .github/workflows/primer-workflow.yml
+name: Mi Primer Robot
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mi-trabajo:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Paso 1 - Hola
+        run: echo "👋 ¡Hola mundo desde GitHub Actions!"
+      
+      - name: Paso 2 - Fecha
+        run: echo "📅 Hoy es $(date)"
+      
+      - name: Paso 3 - Directorio
+        run: |
+          echo "📁 Estoy en: $(pwd)"
+          echo "📂 Archivos:"
+          ls -la
+          
